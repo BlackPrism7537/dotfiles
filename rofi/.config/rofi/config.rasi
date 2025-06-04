@@ -1,0 +1,5 @@
+configuration{
+    terminal:"kitty";
+}
+@import "~/.cache/wal/colors-rofi-dark"
+
