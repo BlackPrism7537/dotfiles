@@ -14,7 +14,7 @@ blur="50x30"
 # write path to wp into file
 if [ ! -f $current_wp ]; then
     touch $current_wp
-    echo "$HOME/wallpapers/background_1.jpg" > "$current_wp"
+    echo "$HOME/wallpapers/background_3.jpg" > "$current_wp"
 fi
 
 # current wallpaper path
@@ -25,7 +25,7 @@ wal -q -i $current_wallpaper
 
 # launch waybar based on new wallpaper colors
 source "$HOME/.cache/wal/colors.sh"
-~/.config/waybar/launch.sh
+~/.config/waybar/scripts/launch.sh
 
 # update soft link to cava colors based on wallpaper colors
 # (cava needs to manually be restarted)
