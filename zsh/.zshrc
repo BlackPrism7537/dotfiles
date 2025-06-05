@@ -31,3 +31,5 @@ source $ZSH/oh-my-zsh.sh
 
 alias cl="clear"
 alias fetch="cl;fastfetch;"
+
+export PATH=$PATH:/home/zac/.spicetify

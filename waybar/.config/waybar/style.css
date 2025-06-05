@@ -26,9 +26,10 @@
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: @background;
     transition-property: background-color;
     transition-duration: .5s;
+
 }
 
 /* workspaces */
@@ -71,9 +72,10 @@ window#waybar {
 
 /* window title */
 #window {
-    margin: 4px 8px 4px 8px;
-    padding: 0;
     color: @text;
+    border-radius: 16px;    
+    padding: 1px 8px 0px 8px;
+    margin: 4px 1px;
 }
 
 
