@@ -4,15 +4,19 @@
 		"on-click": "activate",
 		"active-only": false,
 		"all-outputs": true,
-		"format": "{}",
+		"format": "{icon}",
 		"format-icons": {
-			"urgent": "",
-			"active": "",
-			"default": ""
+			"urgent": "  ",
+			"active": "  ",
+			"default": "  "
 		},
 		"persistent-workspaces": {
 			"*": 5
 		}
+	},
+
+	"hyprland/window" : {
+		"format": "{}"
 	},
    	
 
@@ -24,27 +28,20 @@
 		"on-click-middle": "close"
 	},
 	
-
 	"clock": {  
 		"interval": 1,
 		"format": "{:%H:%M}",
 		"format-alt": "{:%A, %B %d - %H:%M}",
-		"tooltip-format": "<big>{calendar}</big>",
-		"calendar": {
-			"mode": "month",
-			"mode-mon-col": 3,
-			"weeks-pos": "right",
-			"on-scroll": 1,
-			"format": {
-				"months": "<span color='#ffffff'><b>{}</b></span>",
-				"days": "<span color='#ffffff'><b>{}</b></span>",
-				"weeks": "<span color='#ffffff'><b>W{}</b></span>",
-				"weekdays": "<span color='#ffffff'><b>{}</b></span>",
-				"today": "<span color='#ffffff'><b><u>{}</u></b></span>"
-			}
-		}
+		"tooltip": false
 	},
-	
+
+    "custom/weather": {
+		"format": "{}°",
+		"tooltip": true,
+		"interval": 3600,
+		"exec": "wttrbar",
+		"return-type": "json"
+	},	
 
 	"group/hardware": {
 		"orientation": "inherit",       
@@ -89,7 +86,7 @@
 
 	"pulseaudio": {
 		"scroll-step": 1,
-		"format": "{icon}    {volume}%",
+		"format": "{icon}  {volume}%",
 		"format-bluetooth": "{volume}% {icon} {format_source}",
 		"format-bluetooth-muted": "󰖁 {icon} {format_source}",
 		"format-muted": "󰖁 {format_source}",
@@ -120,17 +117,13 @@
 		"format-wifi": " ",
 		"format-ethernet": "󰌘 {ifname}",
 		"format-disconnected": "disconnected",
-		"tooltip-format": "󰌘 {ifname} via {gwaddri}",
-		"tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
-		"tooltip-format-ethernet": "󰌘 {ifname}\nIP: {ipaddr}\n  {bandwidthUpBits}  {bandwidthDownBits}",
-		"tooltip-format-disconnected": "disconnected",
 		"max-length": 50,
-		"on-click": "nm-connection-editor"
-
+		"on-click": "nm-connection-editor",
+		"tooltip": false
 	},
 	
 	"custom/exit": {
-		"format": "",
+		"format": "⏻",
 		"on-click": "wlogout -b 2",
 		"tooltip": false		
 	}

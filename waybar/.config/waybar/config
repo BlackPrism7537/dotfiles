@@ -1,31 +1,37 @@
 {
+    //positioning
+    "position": "top",
+    "margin-top": 8,
+    "margin-bottom": 0,
 
-	"include": "~/.config/waybar/modules.json",
-	
-	"position": "top",
-	"margin-top": 8,
-	"margin-bottom": 0,
-	"layer": "top",
-	"margin-left": 8,
-	"margin-right": 8,    
-	"spacing": 10,
-	"fixed-center": true,
-	"exclusive": true,
-	
-	"modules-left": [
-	    "hyprland/workspaces",
-            "wlr/taskbar"
-        ],
-        
-    "modules-center": [
-        "clock"
+    //sizing and margins
+    "layer": "top",
+    "height": 16,
+    "margin-left": 8,
+    "margin-right": 8,
+    "spacing": 0,
+
+    //load modules
+    "include": ["~/.config/waybar/modules.json"],
+
+    //modules left
+    "modules-left": [
+        //"wlr/taskbar",
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
+
+    //modules center
+    "modules-center": [
         
+    ],
+
+    //modules right
     "modules-right": [
-        //"group/hardware",
+        "custom/weather",
         "pulseaudio",
-        "bluetooth",
         "network",
-        "custom/exit"
+        "custom/exit",
+        "clock"
     ]
 }
