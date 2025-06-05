@@ -9,12 +9,8 @@
 
 /* pywal colors */ 
 @import '../../.cache/wal/colors-waybar.css';
-@define-color ws @color4;
-@define-color tt @color1;
 @define-color bg-active @color3;
 @define-color bg-passive @color4;
-@define-color tb rgba(200,200,200,0.2);
-@define-color tbh @color5;
 @define-color text #FFFFFF;
 
 /* general */
