@@ -126,5 +126,13 @@
 		"format": "⏻",
 		"on-click": "wlogout -b 2",
 		"tooltip": false		
+	},
+
+	"custom/spotify": {
+		"format": "{} ",
+		"exec": "~/.config/waybar/scripts/mediaplayer.sh",
+		"return-type": "json",
+		"on-click": "playerctl -p spotify_player play-pause",
+		"exec-if": "pgreg spotify_player"
 	}
 }

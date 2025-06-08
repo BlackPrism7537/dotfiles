@@ -28,6 +28,7 @@
 
     //modules right
     "modules-right": [
+        "custom/spotify",
         "custom/weather",
         "pulseaudio",
         "network",

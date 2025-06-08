@@ -155,3 +155,11 @@ window#waybar {
     opacity: 0.9;
 }
  
+#custom-spotify {
+    background-color: @background;
+    color: @text;
+    border-radius: 16px;    
+    padding: 1px 12px 0px 8px;
+    margin: 4px 1px;
+    opacity: 0.9;
+}
