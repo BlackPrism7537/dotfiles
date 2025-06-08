@@ -31,5 +31,17 @@ source $ZSH/oh-my-zsh.sh
 
 alias cl="clear"
 alias fetch="cl;fastfetch;"
+alias vi="nano"
+alias sp="spotify_player"
 
 export PATH=$PATH:/home/zac/.spicetify
+
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
