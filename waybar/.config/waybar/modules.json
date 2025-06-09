@@ -129,10 +129,10 @@
 	},
 
 	"custom/spotify": {
-		"format": "{} ",
-		"exec": "~/.config/waybar/scripts/mediaplayer.sh",
+		"format": "{}",
+		"exec": "/home/zac/.config/waybar/scripts/mediaplayer.sh",
 		"return-type": "json",
 		"on-click": "playerctl -p spotify_player play-pause",
-		"exec-if": "pgreg spotify_player"
+		"interval": 2
 	}
 }

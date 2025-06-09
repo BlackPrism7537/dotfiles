@@ -1,18 +1,34 @@
 #!/bin/bash
+PLAYERS="spotify_player firefox";
+INCONS=" ";
+META="{{ trunc(artist,17) }} - {{ trunc(title, 17) }}";
 
-while true; do
-	player_status=$(playerctl -p spotify_player status 2>/dev/null)
-	artist=$(playerctl -p spotify_player metadata artist)
-	title=$(playerctl -p spotify_player metadata title)
-	
-	if [ "$player_status" = "Playing" ]; then
-		# Escape special characters for JSON
-		artist=$(echo "$artist" | sed 's/&/&amp;/g')
-		title=$(echo "$title" | sed 's/&/&amp;/g')
+get_metadata () {
+	echo "$(playerctl metadata --player $1 --format "{{ trunc(artist,17) }} - {{ trunc(title, 17) }}")"
+}
 
-		echo '{"text": "'"$artist - $title"'", "class": "custom-spotify", "alt": "spotify"}'
-	elif [ "$player_status" = "Paused" ]; then
-		echo '{"text": "'"$artist - $title"'", "class": "custom-spotify", "alt": "spotify (Paused)"}'
+get_icon () {
+	if [ "$1" = "spotify_player" ]; then
+		echo ""
+	elif [[ $1 == *"firefox"* ]]; then
+		echo ""
+	else
+		echo ""
 	fi
-	sleep 3
-done
+}
+
+PLAYER="spotify_player"
+STATUS="$(playerctl --player=$PLAYER status 2>/dev/null)"
+
+if [ "$STATUS" = "Playing" ]; then
+	METADATA=$(get_metadata $PLAYER)
+	ICON=$(get_icon $PLAYER)
+	echo '{"text": "'"$ICON $METADATA"'", "class": "playing", "alt": "spotify"}'
+elif [ "$STATUS" = "Paused" ]; then
+	METADATA=$(get_metadata $PLAYER)
+	ICON=$(get_icon $PLAYER)
+	echo '{"text": "'"$ICON $METADATA"'", "class": "paused", "alt": "spotify (Paused)"}'
+else 
+	ICON=$(get_icon $PLAYER)
+	echo '{"text": "'"$ICON"'", "class": "inactive", "alt": "spotify (Inactive)"}'
+fi

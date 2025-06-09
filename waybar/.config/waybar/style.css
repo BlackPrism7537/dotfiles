@@ -162,4 +162,15 @@ window#waybar {
     padding: 1px 12px 0px 8px;
     margin: 4px 1px;
     opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-spotify.inactive {
+    background-color: @background;
+    color: @text;
+    border-radius: 16px;    
+    padding: 1px 12px 0px 8px;
+    margin: 4px 1px;
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
 }
