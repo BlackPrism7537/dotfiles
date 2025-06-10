@@ -18,7 +18,6 @@
 	"hyprland/window" : {
 		"format": "{}"
 	},
-   	
 
 	"wlr/taskbar": {
 		"format": "{icon}",
@@ -27,8 +26,8 @@
 		"on-click": "activate",
 		"on-click-middle": "close"
 	},
-	
-	"clock": {  
+
+	"clock": {
 		"interval": 1,
 		"format": "{:%H:%M}",
 		"format-alt": "{:%A, %B %d - %H:%M}",
@@ -41,48 +40,42 @@
 		"interval": 3600,
 		"exec": "wttrbar",
 		"return-type": "json"
-	},	
+	},
 
 	"group/hardware": {
-		"orientation": "inherit",       
+		"orientation": "inherit",
 		"modules": [
 			"cpu",
 			"temperature"
 		]
 	},
-	
 
 	"custom/system": {
 		"format": "<span size='small'>  </span>",
 		"tooltip": false
 	},
-	
 
 	"cpu": {
 		"format": " 󰍛 {usage}% ",
 		"on-click": "kitty btop"
 	},
-	
 
 	"temperature": {
 		"format": " 󰈸 {temperatureC}°C ",
 		"on-click": "kitty btop"
 	},
-	
 
 	"disk": {
 		"interval": 30,
 		"format": " 󰋊 {percentage_used}% ",
 		"path": "/",
 		"on-click": "kitty btop"
-	}, 
-	
+	},
 
 	"memory": {
 		"format": "  {}% ",
 		"on-click": "kitty btop"
 	},
-
 
 	"pulseaudio": {
 		"scroll-step": 1,
@@ -101,7 +94,6 @@
 		"on-click": "pavucontrol"
 	},
 	
-
 	"bluetooth": {
 		"format": "",
 		"format-disabled": "",
@@ -111,7 +103,6 @@
 		"format-no-controller": ""
 	},
 	
-
 	"network": {
 		"format": "{ifname}",
 		"format-wifi": " ",
@@ -125,7 +116,7 @@
 	"custom/exit": {
 		"format": "⏻",
 		"on-click": "wlogout -b 2",
-		"tooltip": false		
+		"tooltip": false
 	},
 
 	"custom/spotify": {
