@@ -1,0 +1,15 @@
+set linenumbers
+set autoindent
+set nohelp
+set nonewlines
+set locking
+
+bind ^z undo main
+bind ^y redo main
+bind ^f whereis main
+bind F1 exit main
+bind F2 savefile main
+bind F3 findnext main
+
+#Add colour syntax
+include /usr/local/share/nano/*.nanorc
