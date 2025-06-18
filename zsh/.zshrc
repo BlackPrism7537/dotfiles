@@ -21,7 +21,6 @@ ENABLE_CORRECTION="true"
 
 plugins=(
     git
-    zsh-autosuggestions
     zsh-syntax-highlighting
     fast-syntax-highlighting
     zsh-autocomplete
@@ -45,3 +44,4 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+eval "$(zoxide init --cmd cd  zsh)"
