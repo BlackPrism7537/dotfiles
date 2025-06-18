@@ -33,6 +33,16 @@ alias fetch="cl;fastfetch;"
 alias vi="nano"
 alias sp="spotify_player"
 
+# git alias'
+alias gs="git status --short"
+alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
+alias ga="git add"
+alias gc="git conmmit"
+alias gp="git push"
+alias gu="git pull"
+alias gi="git init"
+alias gcl="gity clone"
+
 export PATH=$PATH:/home/zac/.spicetify
 
 
