@@ -12,4 +12,4 @@ bind F2 savefile main
 bind F3 findnext main
 
 #Add colour syntax
-include /usr/local/share/nano/*.nanorc
+#include /usr/local/share/nano/*.nanorc
