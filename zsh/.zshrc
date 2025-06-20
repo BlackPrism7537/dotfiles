@@ -37,11 +37,11 @@ alias sp="spotify_player"
 alias gs="git status --short"
 alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
 alias ga="git add"
-alias gc="git conmmit"
+alias gc="git commit"
 alias gp="git push"
 alias gu="git pull"
 alias gi="git init"
-alias gcl="gity clone"
+alias gcl="git clone"
 
 export PATH=$PATH:/home/zac/.spicetify
 
@@ -55,3 +55,4 @@ function y() {
 }
 
 eval "$(zoxide init --cmd cd  zsh)"
+fetch
