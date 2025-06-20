@@ -1,5 +1,6 @@
 configuration{
     terminal:"kitty";
+    font:"CaskaydiaCove Nerd Font 14";
 }
 @import "~/.cache/wal/colors-rofi-dark"
 
